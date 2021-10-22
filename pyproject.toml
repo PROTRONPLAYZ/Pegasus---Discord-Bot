@@ -1,0 +1,26 @@
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core>=1.0.0"]
+
+[tool]
+[tool.poetry]
+authors = ["nandhagk <nandhagopi@gmail.com>"]
+description = ""
+name = "starter-bot"
+version = "0.1.0"
+[tool.poetry.dependencies]
+discord = "^1.0.1"
+"discord.py" = "^1.7.2"
+python = "^3.8"
+python-dotenv = "^0.17.1"
+requests = "^2.25.1"
+flask = "^2.0.1"
+lyricsgenius = "^3.0.1"
+googletrans = "^3.0.0"
+python-lichess = "^0.10"
+wikipedia = "^1.4.0"
+praw = "^7.4.0"
+chatbot-py = "^2.74"
+[tool.poetry.dev-dependencies]
+black = "^21.5b1"
+pytest = "^5.2"
