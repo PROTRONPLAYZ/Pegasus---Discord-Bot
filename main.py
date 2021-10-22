@@ -29,7 +29,7 @@ async def on_ready():
 
 # @bot.event
 # async def on_command_error(ctx, error):
-#   await ctx.reply(f"Ahh I dont know what you are trying to say <:OhGodOhNo:836482963344457728>  \nType **{'.help'}** to get more info",mention_author=True)something?
+#   await ctx.reply(f"Ahh I dont know what you are trying to say <:OhGodOhNo:836482963344457728>  \nType **{'.help'}** to get more info",mention_author=True)
 
 @bot.event
 async def on_member_join(ctx, member):
