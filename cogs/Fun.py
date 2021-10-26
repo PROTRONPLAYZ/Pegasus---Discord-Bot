@@ -271,6 +271,7 @@ class Fun(commands.Cog):
 
       if word_lst1 > 100:
         await ctx.send("Sorry I can't spam that much :-(")
+        await ctx.message.delete()
 
       else:
       
