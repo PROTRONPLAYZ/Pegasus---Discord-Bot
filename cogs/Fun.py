@@ -268,10 +268,17 @@ class Fun(commands.Cog):
       
       wordslst = nums[0]
       word_lst1 = int(nums[1])
+
+      if word_lst1 > 100:
+        await ctx.send("Sorry I can't spam that much :-(")
+
+      else:
       
-      for i in range(word_lst1):
-        await ctx.send(wordslst)
-        await asyncio.sleep(1)
+        for i in range(word_lst1):
+          await ctx.send(wordslst)
+          await asyncio.sleep(1)
+
+
 
 def setup(bot: commands.Bot):
   bot.add_cog(Fun(bot))

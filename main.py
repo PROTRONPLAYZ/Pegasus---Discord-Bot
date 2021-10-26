@@ -2,6 +2,7 @@ import discord
 import os
 import asyncio
 import random
+import time
 from Keep_Alive import Keep_Alive
 from discord.ext import commands
 
@@ -61,7 +62,7 @@ async def bye(ctx):
   embed=discord.Embed(
         title=f"Bye...have a nice day\n....  :wave:" ,colour=0x3498db)
 
-  embed.set_thumbnail( url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVdosJvPeezKKg0MNat7etXwvhqgeTeh2WTg&usqp=CAU"
+  embed.set_thumbnail( url=bot.user.avatar_url
   )      
   await ctx.send(embed=embed)
 
@@ -166,7 +167,9 @@ async def nick(ctx, member: discord.Member,nick):
 @bot.command()
 async def dm(ctx, member: discord.User, *, msg):
   """DMING PPL"""
-  await member.send(msg)
+  await member.send(msg, delete_after = 5)
+  time.sleep(1)
+  await ctx.reply('Sent!', mention_author=True, delete_after = 1.5)
 
 Keep_Alive()
 bot.run(os.getenv('PEGASUS'))
