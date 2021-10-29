@@ -69,12 +69,12 @@ async def bye(ctx):
 @bot.command(aliases=['Gn', 'gN', 'GN', 'Good_Night'])
 async def gn(ctx):
   """Good Nights"""
-  await ctx.send(f'Good Night {ctx.author}')
+  await ctx.send(f'Good Night')
 
 @bot.command(aliases=['Gm', 'gM', 'GM', 'Good_Morning'])
 async def gm(ctx):
   """Good Mornings"""
-  await ctx.send(f'Good Morning {ctx.author}')
+  await ctx.send(f'Good Morning')
 
 @bot.command(aliases=['thx'])
 async def thanks(ctx):
