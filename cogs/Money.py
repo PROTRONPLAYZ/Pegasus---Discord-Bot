@@ -32,6 +32,8 @@ class Money(commands.Cog):
 
       await ctx.send(cur_send)
 
+
+
 def setup(bot: commands.Bot):
   bot.add_cog(Money(bot))
 
