@@ -24,20 +24,11 @@ bot.load_extension('cogs.Pokedex')
 bot.load_extension('cogs.Country')
 bot.load_extension('cogs.Space')
 
-@bot.event
-async def on_ready():
-    print(f'{bot.user.name} has connected to Discord!')
 
-# @bot.event
-# async def on_command_error(ctx, error):
-#   await ctx.reply(f"Ahh I dont know what you are trying to say <:OhGodOhNo:836482963344457728>  \nType **{'.help'}** to get more info",mention_author=True)
 
-@bot.event
-async def on_member_join(ctx, member):
-    print(f'{member} has joined a server.')
 
-    await ctx.send(f"Hello {member}!")
-    await member.send(f'Hello {member}! I am a bot so that means I always help you....anyways there are some rules to follow so you must follow them or you DIE.. LOL just kidding.. \nSo the rules are \nNo pinging anyone unless its important \n No Talking Rubbish (like I do most of the times) \n NO SMOKING \n NO KICKING ANYONE (OF COURSE YOU CANT DO THAT BCAUSE I RULE THE SERVER : )) \nAND LAST BUT NOT THE LEAST::: NO ANNOYING ANYONE OK???, IF NO; Then IDK.')
+
+
 
 @bot.command(aliases=['hello','bello'])
 async def hi(ctx):

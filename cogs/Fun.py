@@ -280,6 +280,14 @@ class Fun(commands.Cog):
           await asyncio.sleep(1)
 
 
+    @commands.command()
+    async def spoiler(self, ctx, *,spoiler_msg):
+      "SECRET SPOILERS"
+      await ctx.message.delete()
+      await ctx.send(f'||{spoiler_msg}||')
+
+
+
 
 def setup(bot: commands.Bot):
   bot.add_cog(Fun(bot))
