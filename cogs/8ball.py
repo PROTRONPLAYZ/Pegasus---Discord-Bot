@@ -40,7 +40,7 @@ class Eightball(commands.Cog):
             "Very doubtful"]
       send_ans = random.choice(responses)
         
-      await ctx.reply(f"🎱 {send_ans}, ***{name}**", mention_author=True)
+      await ctx.reply(f"🎱 {send_ans}, ***{name}***", mention_author=True)
 
 def setup(bot: commands.Bot):
   bot.add_cog(Eightball(bot))

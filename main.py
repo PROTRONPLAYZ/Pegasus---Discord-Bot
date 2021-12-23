@@ -9,7 +9,7 @@ from discord.ext import commands
 intents = discord.Intents.default()
 intents.members = True
 
-bot = commands.Bot(command_prefix=commands.when_mentioned_or('.', '. '), activity=discord.Game(name=".help"))
+bot = commands.Bot(command_prefix=commands.when_mentioned_or('.', '. ', 'hi '), activity=discord.Game(name=".help"))
 
 bot.load_extension('cogs.Fun')
 bot.load_extension('cogs.Info')
@@ -23,11 +23,6 @@ bot.load_extension('cogs.8ball')
 bot.load_extension('cogs.Pokedex')
 bot.load_extension('cogs.Country')
 bot.load_extension('cogs.Space')
-
-
-
-
-
 
 
 @bot.command(aliases=['hello','bello'])
@@ -70,7 +65,7 @@ async def gm(ctx):
 @bot.command(aliases=['thx'])
 async def thanks(ctx):
   """Just for saying thanks to my bot"""
-  all_thx = ['No Problem', 'Always at your service', "I don't like to help you sometimes lol", 'Ahh its okay', "I am very sleep now so don't ask me any help if you want any help ask @Coeus"]
+  all_thx = ['No Problem', 'Always at your service', "I don't like to help you sometimes lol", 'Ahh its okay', "I am very sleep now so don't ask me any help if you want any help ask Aditya Datta"]
 
   thx_send=random.choice(all_thx)
 
@@ -109,10 +104,6 @@ async def servers(ctx):
 @bot.command(aliases=['ui','usinf'])
 async def user_info(ctx, member: discord.Member):
   """User Information like Joined Discord, Nickname Etc."""
-  # if member.nick == None:
-  #   nick='This User is Nick Name Less'
-  # else:
-  #   nick=member.nick
   
   if member == None:
     if ctx.nick == None:
@@ -125,7 +116,6 @@ async def user_info(ctx, member: discord.Member):
     embed.add_field(name='User id: ', value=ctx.id, inline=False)
     embed.add_field(name='Joined Discord: ',value=ctx.created_at,inline=False)
     embed.add_field(name='Nick Name: ',value=nick)
-    #embed.add_field(name='HypSquad: ',value=member.hypesquad_bravery,inline=False)
     embed.set_image(url=ctx.avatar_url)
 
     await ctx.send(embed=embed)
@@ -141,7 +131,6 @@ async def user_info(ctx, member: discord.Member):
     embed.add_field(name='User id: ', value=member.id, inline=False)
     embed.add_field(name='Joined Discord: ',value=member.created_at,inline=False)
     embed.add_field(name='Nick Name: ',value=nick)
-    #embed.add_field(name='HypSquad: ',value=member.hypesquad_bravery,inline=False)
     embed.set_image(url=member.avatar_url)
 
     await ctx.send(embed=embed)
